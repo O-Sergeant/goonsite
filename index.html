@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,25 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Website</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="navigateTo.js"></script>
 </head>
 <body>
     <h1>Welcome to My Website</h1>
     <img src="8a8d97fa-0feb-4105-8118-a4b5ac0c605d_1000x1000.jpeg" alt="Description of your image">
-    
-    <button class="nav-button" onclick="navigateTo('page2.html')">
+
+    <button class="nav-button" onclick="location.href='#page2'">
         &rarr; Next
     </button>
 
-    <div id="index" class="page active">
+    <div id="index" class="page" tabindex="0">
         <p>Content for index.html</p>
     </div>
 
-    <div id="page2" class="page">
+    <div id="page2" class="page" tabindex="0">
         <p>Content for page2.html</p>
     </div>
 
-    <div id="page3" class="page">
+    <div id="page3" class="page" tabindex="0">
         <p>Content for page3.html</p>
     </div>
 </body>
