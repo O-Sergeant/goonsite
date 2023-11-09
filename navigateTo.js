@@ -1,13 +1,15 @@
 function navigateTo(targetPage) {
-    console.log(`Navigating to ${targetPage}`);
     const currentPage = document.querySelector('.page');
     const nextPage = document.querySelector(`#${targetPage.replace('.html', '')}`);
 
     if (currentPage && nextPage) {
-        console.log('Containers found, applying transition...');
+        // Apply slide-out class to current page
         currentPage.classList.add('slide-out');
+        
+        // Apply slide-in class to next page
         nextPage.classList.add('slide-in');
 
+        // Remove classes after the transition duration
         setTimeout(() => {
             currentPage.classList.remove('slide-out');
             nextPage.classList.remove('slide-in');
