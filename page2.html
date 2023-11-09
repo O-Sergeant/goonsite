@@ -1,42 +1,67 @@
+<!-- page2.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
+    <title>Page 2</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <!-- Your existing content goes here -->
+    <div class="background-gradient"></div>
+    <h1>This is the next page of my website</h1>
 
-    <div id="weather-info">
-        <p id="temperature">Temperature: </p>
-        <p id="conditions">Conditions: </p>
-        <p id="humidity">Humidity: </p>
+    <div id="page2" class="page" tabindex="0">
+        <div id="weather-info">
+            <h2>Weather Information</h2>
+            <table>
+                <tr>
+                    <th>Temperature</th>
+                    <td id="temperature"></td>
+                </tr>
+                <tr>
+                    <th>Conditions</th>
+                    <td id="conditions"></td>
+                </tr>
+                <tr>
+                    <th>Humidity</th>
+                    <td id="humidity"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="nav-container">
+            <button class="nav-button" onclick="location.href='index.html'">
+                Previous &larr;
+            </button>
+            <!-- You can keep the Next button if needed -->
+            <button class="nav-button" onclick="location.href='page3.html'">
+                Next &rarr;
+            </button>
+        </div>
+
+        <script>
+            const apiKey = 'YOUR_API_KEY';
+            const apiUrl = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/auckland%20new%20zealand/today?unitGroup=metric&key=${apiKey}&contentType=json`;
+
+            // Fetch data from the API
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const currentConditions = data.currentConditions;
+                    const temperature = currentConditions.temp;
+                    const conditions = currentConditions.conditions;
+                    const humidity = currentConditions.humidity;
+
+                    // Display the information in the table
+                    document.getElementById('temperature').innerText = `${temperature}°C`;
+                    document.getElementById('conditions').innerText = conditions;
+                    document.getElementById('humidity').innerText = `${humidity}%`;
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        </script>
     </div>
-
-    <script>
-        const apiKey = '54JVZYHFJD474K9CAB8D6CN4S';
-        const apiUrl = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/auckland%20new%20zealand/today?unitGroup=metric&key=${apiKey}&contentType=json`;
-
-        // Fetch data from the API
-        fetch(apiUrl)
-            .then(response => response.json())
-            .then(data => {
-                const currentConditions = data.currentConditions;
-                const temperature = currentConditions.temp;
-                const conditions = currentConditions.conditions;
-                const humidity = currentConditions.humidity;
-
-                // Display the information on the website
-                document.getElementById('temperature').innerText = `Temperature: ${temperature}°C`;
-                document.getElementById('conditions').innerText = `Conditions: ${conditions}`;
-                document.getElementById('humidity').innerText = `Humidity: ${humidity}%`;
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
-    </script>
-
-    <!-- Your existing scripts or other content goes here -->
 </body>
 </html>
