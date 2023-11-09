@@ -3,7 +3,7 @@ function navigateTo(targetPage) {
     const nextPage = document.querySelector(`#${targetPage.replace('.html', '')}`);
 
     if (currentPage && nextPage) {
-        currentPage.style.display = 'none';
-        nextPage.style.display = 'block';
+        currentPage.classList.remove('active');
+        nextPage.classList.add('active');
     }
 }
