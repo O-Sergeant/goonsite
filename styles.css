@@ -22,8 +22,9 @@ h1 {
     bottom: 0;
     left: 0;
     z-index: 0;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+    background: linear-gradient(rgba(144, 238, 144, 0.8), rgba(144, 238, 144, 0.8));
 }
+
 
 .nav-container {
     position: relative;
