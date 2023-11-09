@@ -1,1 +1,41 @@
+/* Reset some default browser styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
 
+/* Apply a background color to the body */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Style the header (h1) */
+h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Style the navigation buttons */
+.nav-button {
+    background-color: #0074D9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Style for the hover effect */
+.nav-button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the page container */
+.page {
+    display: none;
+}
