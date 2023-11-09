@@ -11,9 +11,24 @@ h1 {
     color: #333;
 }
 
+.page {
+    position: relative;
+}
+
+.background-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+}
+
 .nav-container {
     position: relative;
     text-align: center;
+    z-index: 1;
 }
 
 .nav-button {
@@ -38,4 +53,6 @@ img {
     height: auto;
     display: block;
     margin: 20px auto;
+    position: relative;
+    z-index: 1;
 }
