@@ -1,3 +1,83 @@
+/* Reset some default browser styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color to the body */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Style the header (h1) */
+h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Style the main content container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style images to be responsive and centered */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* Style navigation links */
+.navigation {
+    text-align: center;
+    margin: 20px 0;
+}
+.navigation a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Style links within content */
+a {
+    color: #0074D9;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a:hover {
+    color: #0056b3;
+}
+
+/* Style the navigation buttons */
+.nav-button {
+    background-color: #0074D9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Style for the hover effect */
+.nav-button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the page container */
 .page {
     position: absolute;
     width: 100%;
@@ -5,12 +85,11 @@
     left: 0;
 }
 
+/* Add these styles for the sliding effect */
 .slide-out {
     transform: translateX(-100%);
-    transition: transform 0.5s ease;
 }
 
 .slide-in {
     transform: translateX(0);
-    transition: transform 0.5s ease;
 }
