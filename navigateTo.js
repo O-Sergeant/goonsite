@@ -1,3 +1,4 @@
+/*
 function navigateTo(targetPage) {
     console.log(`Navigating to ${targetPage}`);
     const currentPage = document.querySelector('.page');
@@ -17,3 +18,4 @@ function navigateTo(targetPage) {
         }, 500); // Adjust the timeout to match your transition duration
     }
 }
+/*
