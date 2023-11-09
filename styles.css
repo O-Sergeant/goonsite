@@ -18,6 +18,37 @@ h1 {
     padding: 20px;
 }
 
+/* Style images to be responsive and centered */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* Style navigation links */
+.navigation {
+    text-align: center;
+    margin: 20px 0;
+}
+.navigation a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Style links within content */
+a {
+    color: #0074D9;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a:hover {
+    color: #0056b3;
+}
+
 /* Style the navigation buttons */
 .nav-button {
     background-color: #0074D9;
@@ -37,5 +68,14 @@ h1 {
 
 /* Style for the page container */
 .page {
-    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.page.active {
+    opacity: 1;
 }
