@@ -60,7 +60,6 @@ a:hover {
     color: #0056b3;
 }
 
-
 /* Style the navigation buttons */
 .nav-button {
     background-color: #0074D9;
@@ -83,14 +82,11 @@ a:hover {
     position: absolute;
     width: 100%;
     height: 100%;
+    left: 0;
     transition: transform 0.5s ease;
 }
 
 /* Style for the sliding effect */
-.page:nth-child(1) {
-    transform: translateX(0);
-}
-
-.page:nth-child(2) {
+.page.next {
     transform: translateX(100%);
 }
